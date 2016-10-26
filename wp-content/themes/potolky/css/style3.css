@@ -370,6 +370,14 @@ body, html {
   font-size: 20px;
   color: #000; }
 
+
+/*Добавлена ссылка в uslugi.php*/
+.az-cat-title a{
+  text-decoration: none;
+  color: #000;
+}
+
+
 .az-cat-list a {
   font-family: "Conv_MyriadPro-Regular";
   font-size: 15px;

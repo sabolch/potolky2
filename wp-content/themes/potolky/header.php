@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Главная</title>
+	<title><?php the_title() ?></title>
 
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/libs/bootstrap/bootstrap-grid-3.3.1.min.css" />
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/libs/font-awesome/font-awesome.min.css" />
@@ -32,3 +32,8 @@
 	<script src="<?php echo get_template_directory_uri(); ?>/js/responsiveTabs.js"></script>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/jquery.maskedinput.min.js"></script>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/common.js"></script>
+	
+	<div class="az-content">
+		<section class="az-header">
+			<?php require_once('includes/header.php'); ?>
+		

@@ -1,92 +1,45 @@
 <div class="az-breadcrumbs-outer">
-	<div class="ab-brad-crumps">
-		<a href="#">О потолках</a>
-		/
-		<a href="#">Статьи</a>
-		/
-		<span>Путь до внутренней страницы</span>
-	</div>
+	<?php include_once ('breadcramp.php') ?>
 </div>
 <h1 class="az-pad">Услуги и товары</h1>
 <div class="az-margin-top20">
-	<div class="az-col1">
+	<?php 
+        wp_reset_query(); 
+        $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+        $wp_query = new WP_Query(array(
+            'paged'          => $paged,  
+            'post_type' => 'post',
+            'post_status' => 'publish',
+            'posts_per_page' => 6,
+            'orderby' => 'date',
+            'order' => "ASC",
+            'caller_get_posts'=> 1)
+        ); ?>
+    <?php while ($wp_query->have_posts()) : $wp_query->the_post();?>
+
+    <div class="az-col1">
 		<div class="az-cat">
 			<div class="az-img-box az-img-box_style">
-				<img src="<?php echo get_template_directory_uri(); ?>/img/az-cat1.jpg" alt="">
+				<a href="<?php the_permalink() ?>"><?php the_post_thumbnail('full'); ?></a>
+
 				<div class="az-col">более 230 статей</div>
 			</div>
-			<div class="az-cat-title az-margin-top10">Реечные потолки</div>
+			<div class="az-cat-title az-margin-top10"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></div>
 			<ul class="az-cat-list az-margin-top10">
 				<li><a href="#">Материал для потолка</a></li>
 				<li><a href="#">Рейки</a></li>
+				
 			</ul>
 		</div>
-	</div>
-	<div class="az-col1">
-		<div class="az-cat">
-			<div class="az-img-box az-img-box_style">
-				<img src="<?php echo get_template_directory_uri(); ?>/img/az-cat2.jpg" alt="">
-				<div class="az-col">более 155 статей</div>
-			</div>
-			<div class="az-cat-title az-margin-top10">Деревянные потолки</div>
-			<ul class="az-cat-list az-margin-top10">
-				<li><a href="#">Пиломатериалы</a></li>
-				<li><a href="#">Инструменты</a></li>
-			</ul>
-		</div>
-	</div>
-	<div class="az-col1">
-		<div class="az-cat">
-			<div class="az-img-box az-img-box_style">
-				<img src="<?php echo get_template_directory_uri(); ?>/img/az-cat3.jpg" alt="">
-				<div class="az-col">более 921 статей</div>
-			</div>
-			<div class="az-cat-title az-margin-top10">Дизайнерские потолки</div>
-			<ul class="az-cat-list az-margin-top10">
-				<li><a href="#">Дизайн проекты</a></li>
-				<li><a href="#">Дизайнеры</a></li>
-			</ul>
-		</div>
-	</div>
-	<div class="az-col1">
-		<div class="az-cat">
-			<div class="az-img-box az-img-box_style">
-				<img src="<?php echo get_template_directory_uri(); ?>/img/az-cat4.jpg" alt="">
-				<div class="az-col">более 162 статей</div>
-			</div>
-			<div class="az-cat-title az-margin-top10">Натяжные потолки</div>
-			<ul class="az-cat-list az-margin-top10">
-				<li><a href="#">Материал ткань</a></li>
-				<li><a href="#">Шпатели</a></li>
-			</ul>
-		</div>
-	</div>
-	<div class="az-col1">
-		<div class="az-cat">
-			<div class="az-img-box az-img-box_style">
-				<img src="<?php echo get_template_directory_uri(); ?>/img/az-cat5.jpg" alt="">
-				<div class="az-col">более 221 статей</div>
-			</div>
-			<div class="az-cat-title az-margin-top10">Крашенные потолки</div>
-			<ul class="az-cat-list az-margin-top10">
-				<li><a href="#">Краска для потолков</a></li>
-				<li><a href="#">Инструмент для покраски</a></li>
-			</ul>
-		</div>
-	</div>
-	<div class="az-col1">
-		<div class="az-cat">
-			<div class="az-img-box az-img-box_style">
-				<img src="<?php echo get_template_directory_uri(); ?>/img/az-cat6.jpg" alt="">
-				<div class="az-col">более 640 статей</div>
-			</div>
-			<div class="az-cat-title az-margin-top10">Подвесные потолки</div>
-			<ul class="az-cat-list az-margin-top10">
-				<li><a href="#">Кипсокартон</a></li>
-				<li><a href="#">Направляющие</a></li>
-			</ul>
-		</div>
-	</div>
+	</div>    
+
+    <?php endwhile; ?>
+	
+	
+	
+	
+	
+	
 	<div class="clearfix"></div>
 </div>
 

@@ -1,8 +1,5 @@
 ﻿<?php get_header() ?>
-<div class="az-content">
-	<section class="az-header">
-		<?php require_once('includes/header.php'); ?>
-		<?php require_once('includes/header-bottom.php'); ?>
+	<?php require_once('includes/header-bottom.php'); ?>
 	</section>
 	<div class="header-buffer"></div>
 	<section class="az-middle">
