@@ -1,4 +1,7 @@
 ﻿<?php get_header() ?>
+
+
+
 	<?php require_once('includes/header-bottom.php'); ?>
 	</section>
 	<div class="header-buffer"></div>

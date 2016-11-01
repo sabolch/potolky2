@@ -34,9 +34,9 @@
 				       wp_nav_menu($args ); 
 				      ?>
 				</ul>
-				<form action="" class="ah-head-form">
+				<form action="<?php bloginfo( 'url' ); ?>" class="ah-head-form">
 					<label>
-						<input type="text" name="poisk" placeholder="Искать на сайте, например натяжной потолок своими руками ...">
+						<input type="text" name="s" value="<?php if(!empty($_GET['s'])){echo $_GET['s'];}?>"  placeholder="Искать на сайте, например натяжной потолок своими руками ...">
 						<input type="submit" value="">
 					</label>
 				</form>
