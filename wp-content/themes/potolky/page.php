@@ -21,8 +21,11 @@
 				</div>
 				<div class="col-md-3">
 					<div class="az-content-right">
-						<div class="az-border">
-							<?php require_once('includes/sidebar2.php'); ?>
+						<div class="sidebar">
+						    <?php  dynamic_sidebar( 'secondary-widget-area' ); ?>
+						    <div class="az-border">
+								<?php require_once('includes/sidebar2.php'); ?>
+							</div>
 						</div>
 					</div>
 				</div>

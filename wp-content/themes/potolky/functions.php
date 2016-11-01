@@ -220,3 +220,12 @@ if (is_category()):
  
     endif;
 }
+
+register_sidebar( array(
+    'name' =>'Sidebar1',
+    'id' => 'secondary-widget-area',
+    'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
+    'after_widget' => '</li>',
+    'before_title' => '<h3 class="widget-title">',
+    'after_title' => '</h3>',
+) );
