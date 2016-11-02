@@ -13,6 +13,9 @@
 			<a href="#" class="az-vote2">Результаты опроса</a>
 		</div>
 	</div>
+	<div class="de-opros">
+		<?php get_poll(n); ?>
+	</div>
 	
 	<div class="az-sidebar-inner">
 		<div class="az-banner">
