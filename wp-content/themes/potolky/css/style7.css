@@ -1,3 +1,11 @@
 .de-single-wrap >ol>li>a:hover{
 	color: #B70429;
 }
+
+.de-single-wrap >ol{
+	margin-left: 20px;	
+}
+
+.de-single-wrap >ol>li>a{
+	font-family: "PFBeauSansPro-Book";
+}

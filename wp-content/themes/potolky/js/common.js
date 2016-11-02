@@ -2,9 +2,6 @@
 
 $(document).ready(function(){
 
-
-
-
     // $('.az-select').each(function(){
     //     var select = $(this);    
     //     var option = select.find('select option');
@@ -54,7 +51,7 @@ $(document).ready(function(){
         setTimeout(left.height(height), 500);
         setTimeout(right.height(height), 500);
     }
-
+    
  });
 
 

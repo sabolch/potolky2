@@ -13,6 +13,7 @@
 			<a href="#" class="az-vote2">Результаты опроса</a>
 		</div>
 	</div>
+	
 	<div class="az-sidebar-inner">
 		<div class="az-banner">
 			<img src="<?php echo get_template_directory_uri(); ?>/img/az-banner.jpg" alt="">

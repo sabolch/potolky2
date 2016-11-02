@@ -13,7 +13,7 @@
 							<ol>
 							<?php if (have_posts()) : while (have_posts()) :  ?> 
 								<li> <?php the_post(); ?> 
-									<a href="<?php the_permalink();?>"><?php the_title(); ?></a>
+									<a target = "_blank" href="<?php the_permalink();?>"><?php the_title(); ?></a>
 								</li>
 								<?php 
 										//the_content(''); 
