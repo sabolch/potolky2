@@ -1,18 +1,23 @@
 <div class="az-sidebar">
 	<div class="az-opros">
 		<div class="az-title1 az-margin-top16">Опрос</div>
+	</div>
+	
+	<span class="hidden">
 		<div class="az-opros-text">Вам помог наш портал установить потолок самостоятельно ?</div>
-	</div>
-	<div class="az-radio">
-		<input type="radio" name="radio1" id="radio1"><label for="radio1">Очень помогло</label><br>
-		<input type="radio" name="radio1" id="radio2"><label for="radio2">Спасибо не помогло</label><br>
-		<input type="radio" name="radio1" id="radio3"><label for="radio3">Качественно!</label><br>
-		<input type="radio" name="radio1" id="radio4"><label for="radio4">Спасибо Вам</label><br>
-		<div class="az-vote az-margin-top20">
-			<a href="#" class="az-vote1">Проголосовать</a>
-			<a href="#" class="az-vote2">Результаты опроса</a>
+		<div class="az-radio">
+			<input type="radio" name="radio1" id="radio1"><label for="radio1">Очень помогло</label><br>
+			<input type="radio" name="radio1" id="radio2"><label for="radio2">Спасибо не помогло</label><br>
+			<input type="radio" name="radio1" id="radio3"><label for="radio3">Качественно!</label><br>
+			<input type="radio" name="radio1" id="radio4"><label for="radio4">Спасибо Вам</label><br>
+			<div class="az-vote az-margin-top20">
+				<a href="#" class="az-vote1">Проголосовать</a>
+				<a href="#" class="az-vote2">Результаты опроса</a>
+			</div>
 		</div>
-	</div>
+
+	</span>
+
 	<div class="de-opros">
 		<?php get_poll(n); ?>
 	</div>
